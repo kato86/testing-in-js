@@ -3,4 +3,11 @@ const substract = (x, y) => x - +y;
 const multiply = (x, y) => +x * +y;
 const divide = (x, y) => +x / +y;
 
-module.exports = { add, substract, multiply, divide };
+const validateNumbers = (x, y) => {
+  if (isNaN(x) || isNaN(y)) {
+    return false;
+  }
+  return true;
+};
+
+module.exports = { add, substract, multiply, divide, validateNumbers };
